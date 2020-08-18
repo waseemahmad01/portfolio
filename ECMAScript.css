@@ -1,0 +1,412 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap');
+body{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+/* Header Section*/
+header{
+    position: absolute;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid #a1a1a1;
+    padding: 0px 15px;
+    z-index: 10px;
+}
+.container{
+    max-width: 1140px;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+header .row{
+    justify-content: space-between;
+    align-items: center;
+}
+header.fixed{
+    background-color: #ffffff;
+    position: fixed;
+    border-bottom: 1px solid #a1a1a1;
+    z-index: 1;
+}
+header .brand-name a{
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 600;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+header.fixed .brand-name a{
+    color: #000000;
+}
+header .navbar ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+header .navbar ul li{
+    display: inline-block;
+    margin-left: 35px;
+}
+header .navbar ul li a{
+    font-size: 15px;
+    text-decoration: none;
+    line-height: 72px;
+    display: block;
+    color: #ffffff;
+    font-weight: 600;
+    position: relative;
+}
+header.fixed .navbar ul li a{
+    color: #000000;
+}
+header .navbar ul li a::before{
+    content: '';
+    height: 3px;
+    background-color: #ffffff;
+    width: 0%;
+    position: absolute;
+    right: 0;
+    bottom: -1px;
+    transition: all .5s ease;
+}
+header.fixed .navbar ul li a::before{
+    background-color: #febd01;
+}
+header .navbar ul li a:hover::before{
+    width: 100%;
+    left: 0;
+}
+header .navbar ul li a.active::before{
+    width: 100%;
+    left: 0;
+}  
+/* Home Section */
+.home{
+    min-height: 100vh;
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(images/es6.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 15px;
+}
+.home .full-screen{
+    min-height: 100vh;
+}
+.home .home-content{
+    flex: 0 0 100%;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.home .home-content .block{
+    flex: 0 0 75%;
+    max-width: 75%;
+    padding-left: 35px;
+    border-left: 5px solid #ffffff;
+    margin-top: 50px;
+}
+.home .home-content .block h6{
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+}
+.home .home-content .block h1{
+    color: #ffffff;
+    font-size: 60px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+}
+.home .home-content .block h3{
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+}
+.home .home-content .block .cv-btn{
+    padding-top: 20px;
+}
+.home .home-content .block .cv-btn a{
+    border-radius: 4px;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 12px 25px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: all .5s ease;
+}
+.home .home-content .block .cv-btn a:hover{
+    background-color: #ffffff;
+    color: #000000;
+}
+
+
+/* footer */
+
+footer{
+    padding: 80px 15px;
+    background-color: #0c0c17;
+}
+footer .logo{
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+    font-size: 45px;
+    color: #ffffff;
+    font-weight: 900;
+}
+footer .social{
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+    padding-top: 15px;
+}
+footer .social a{
+    color: #999999;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0px 12px;
+    transition: all .5s ease;
+}
+footer .social a:hover{
+    color: #ffffff;
+}
+
+.copyright{
+    background-color: #0c0c17;
+    border-top: 1px solid #1d1d27;
+    padding: 15px;
+}
+.copyright p{
+    color: #838383;
+    margin: 0;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+/* image section */
+.img-content{
+    padding: 100px 15px;
+}
+
+/* Applet */
+.applet{
+    padding: 100px 15px;
+    text-align: center;
+    background-color: #ffffff;
+}
+.applet table{
+    display: inline-block;
+    border-collapse: collapse;
+}
+.applet table tr{
+    border-bottom: 1px solid #a1a1a1;
+}
+.applet table tr td{
+    padding: 10px 15px;
+}
+.applet table tr td label{
+    font-size: 18px;
+    font-weight: 600;
+
+}
+.applet table tr td span{
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 400;
+    margin: 0 0 10px;
+}
+.applet table tr td select{
+    width: 200px;
+    outline: none;
+}
+.applet table tr td:nth-child(odd){
+    text-align: right;
+}
+.applet table tr td:nth-child(even){
+    text-align: left;
+}
+.applet h1{
+    font-size: 35px;
+    margin: 0 0 20px;
+    padding-bottom: 5px;
+    font-weight: 600;
+    position: relative;
+}
+.applet h1::before{
+    content: '';
+    height: 2px;
+    background-color: #febd01;
+    position: absolute;
+    width: 150px;
+    left: auto;
+    bottom: 0;
+    right: auto;
+}
+.applet table tr td .fav{
+    background-color: #febd01;
+}
+.applet table tr td button{
+    text-decoration: none;
+    border-radius: 4px;
+    border: 1px solid #1d1d27;
+    background-color: #1d1d27;
+    padding: 10px 15px;
+    color: #ffffff;
+    transition: all .5s ease;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: all .5s ease;
+    cursor: pointer;
+}
+.applet table tr td button:hover{
+    color: #1d1d27;
+    background-color: #ffffff;
+}
+.applet table tr td button:focus{
+    outline: none;
+}
+/* Two column section */
+.four{
+    padding: 100px 15px;
+    background-color: #f8f8f8;
+}
+.four .container{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+}
+.four .container .box{
+    padding: 35px;
+    text-align: center;
+    background-color: #ffffff;
+    border: 1px solid #a1a1a1;
+}
+.four .container .box i{
+    font-size: 45px;
+    color: #000000;
+}
+.four .container .box h3{
+    font-size: 18px;
+    font-weight: 600;
+    margin: 10px 0 10px;
+    padding-bottom: 5px;
+}
+.four .container .box a{
+    text-decoration: none;
+    border-radius: 4px;
+    border: 1px solid #1d1d27;
+    background-color: #1d1d27;
+    padding: 10px 15px;
+    color: #ffffff;
+    transition: all .5s ease;
+}
+.four .container .box a:hover{
+    color: #1d1d27;
+    background-color: #ffffff;
+}
+
+.ham-burger .fa{
+    font-size: 20px;
+    display: none;
+    height: 30px;
+    width: 35px;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 3px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #eeeeee;
+}
+/* Responsive */
+@media(max-width: 991px){
+    .home .home-content .block h1{
+        font-size: 50px;
+    }
+}
+@media(max-width: 767px){
+    .home .home-content .block h1{
+        font-size: 40px;
+    }
+    .home .home-content .block h3{
+        font-size: 25px;
+    }
+    header{
+        padding: 15px;
+        position: fixed;
+        background-color: #ffffff;
+        border: none;
+        z-index: 11;
+    }
+    header .brand-name a{
+        color: #000000;
+    }
+    .navbar{
+      position: absolute;
+      background-color: #ffffff;
+      width: 100%;
+      left: 0;
+      right: 0;
+      top: 62px;
+      padding: 15px;
+      border-top: 1px solid #eeeeee;
+      border-bottom: 1px solid #eeeeee;
+      z-index: 1;
+      display: none;
+    }
+
+    .navbar.show{
+        display: inline-block;
+    }
+    .ham-burger .fa{
+        display: block;
+    }
+    header .navbar ul li{
+        display: block;
+        margin-left: 0;
+    }
+    header .navbar ul li a{
+        line-height: 42px;
+        color: #000000;
+    }
+    header .navbar ul li a::before{
+        background-color: #febd01;
+    }
+    .four .container{
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: 1fr;
+    }
+}
+@media(max-width: 500px){
+    .home .home-content .block h1{
+        font-size: 30px;
+    }
+    .home .home-content .block h3{
+        font-size: 20px;
+    }
+    .home .home-content .block{
+        padding-left: 20px;
+    }
+    .applet table tr td button{
+        font-size: 10px;
+    }
+}

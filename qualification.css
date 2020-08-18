@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap');
+body{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+.section-title{
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 40px;
+}
+.section-title h1{
+    display: inline-block;
+    font-size: 35px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #000000;
+    margin: 0 0 5px;
+    position: relative;
+    padding-bottom: 5px;
+}
+.section-title h1::before{
+    content: '';
+    left: 0;
+    position: absolute;
+    background-color: #febd01;
+    height: 2px;
+    right: 30%;
+    bottom: 0px;
+}
+.text-center{
+    text-align: center!important;
+}
+/* header */
+header{
+    position: absolute;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid #a1a1a1;
+    padding: 0px 15px;
+    z-index: 10px;
+}
+.container{
+    max-width: 1140px;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+header .row{
+    justify-content: space-between;
+    align-items: center;
+}
+header.fixed{
+    background-color: #ffffff;
+    position: fixed;
+    border-bottom: 1px solid #a1a1a1;
+    z-index: 1;
+}
+header .brand-name a{
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 600;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+header.fixed .brand-name a{
+    color: #000000;
+}
+header .navbar ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+header .navbar ul li{
+    display: inline-block;
+    margin-left: 35px;
+}
+header .navbar ul li a{
+    font-size: 15px;
+    text-decoration: none;
+    line-height: 72px;
+    display: block;
+    color: #ffffff;
+    font-weight: 600;
+    position: relative;
+}
+header.fixed .navbar ul li a{
+    color: #000000;
+}
+header .navbar ul li a::before{
+    content: '';
+    height: 3px;
+    background-color: #ffffff;
+    width: 0%;
+    position: absolute;
+    right: 0;
+    bottom: -1px;
+    transition: all .5s ease;
+}
+header.fixed .navbar ul li a::before{
+    background-color: #febd01;
+}
+header .navbar ul li a:hover::before{
+    width: 100%;
+    left: 0;
+}
+header .navbar ul li a.active::before{
+    width: 100%;
+    left: 0;
+}  
+/* Home Section */
+.home{
+    min-height: 100vh;
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(images/hero2.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 15px;
+}
+.home .full-screen{
+    min-height: 100vh;
+}
+.home .home-content{
+    flex: 0 0 100%;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.home .home-content .block{
+    flex: 0 0 75%;
+    max-width: 75%;
+    padding-left: 35px;
+    border-left: 5px solid #ffffff;
+    margin-top: 50px;
+}
+.home .home-content .block h6{
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+}
+.home .home-content .block h1{
+    color: #ffffff;
+    font-size: 60px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+}
+.home .home-content .block h3{
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+}
+.home .home-content .block .cv-btn{
+    padding-top: 20px;
+}
+.home .home-content .block .cv-btn a{
+    border-radius: 4px;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 12px 25px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: all .5s ease;
+}
+.home .home-content .block .cv-btn a:hover{
+    background-color: #ffffff;
+    color: #000000;
+}
+/* footer */
+
+footer{
+    padding: 80px 15px;
+    background-color: #0c0c17;
+}
+footer .logo{
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+    font-size: 45px;
+    color: #ffffff;
+    font-weight: 900;
+}
+footer .social{
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+    padding-top: 15px;
+}
+footer .social a{
+    color: #999999;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0px 12px;
+    transition: all .5s ease;
+}
+footer .social a:hover{
+    color: #ffffff;
+}
+
+.copyright{
+    background-color: #0c0c17;
+    border-top: 1px solid #1d1d27;
+    padding: 15px;
+}
+.copyright p{
+    color: #838383;
+    margin: 0;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 400;
+}
+/* skills */
+.skills{
+    padding: 100px 15px;
+    background-color: #ffffff;
+}
+.align-item-center{
+    align-items: center;
+}
+.skills .skills-content{
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.skills .skills-content .section-title p{
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #838383;
+    margin: 15px 0 20px;
+
+}
+.skills .skills-content .skill-box{
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 15px;
+}
+.skills .skills-content .skill-box h6{
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000;
+    margin: 0;
+}
+.m{
+    padding-right: 20px;
+}
+.skills .skills-content .skill-box .skill-bar{
+    height: 8px;
+    background-color: #eeeeee;
+    position: relative;
+}
+.skills .skills-content .skill-box .skill-bar .skill-bar-in{
+    background-color: #febd01;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%;
+}
+.skills .skills-content .skill-box .skill-bar .skill-bar-in span{
+    color: #838383;
+    font-size: 16px;
+    font-weight: 400;
+    position: absolute;
+    right: 0;
+    top: -30px;
+}
+
+/* table */
+.table{
+    background-color: #f8f1f1;
+    padding: 50px;
+}
+.table .container{
+    text-align: center;
+}
+.table .container .section-title h1::before{
+    left: 30%;
+    right: 30%;
+}
+.table-content{
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 18px;
+    min-width: 400px;
+    display: inline-block;
+}
+.table-content thead tr{
+    background-color: #febd01;
+    color: #ffffff;
+    text-align: left;
+    font-weight: 600;
+}
+.table-content th ,.table-content td{
+    padding: 12px 15px;
+}
+.table-content tbody tr{
+    border-bottom: 1px solid #dddddd;
+}
+
+.ham-burger .fa{
+    font-size: 20px;
+    display: none;
+    height: 30px;
+    width: 35px;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 3px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #eeeeee;
+}
+/* Responsive */
+@media(max-width: 991px){
+    .home .home-content .block h1{
+        font-size: 50px;
+    }
+}
+@media(max-width: 767px){
+    .home .home-content .block h1{
+        font-size: 40px;
+    }
+    .home .home-content .block h3{
+        font-size: 25px;
+    }
+    header{
+        padding: 15px;
+        position: fixed;
+        background-color: #ffffff;
+        border: none;
+        z-index: 11;
+    }
+    header .brand-name a{
+        color: #000000;
+    }
+    .navbar{
+      position: absolute;
+      background-color: #ffffff;
+      width: 100%;
+      left: 0;
+      right: 0;
+      top: 62px;
+      padding: 15px;
+      border-top: 1px solid #eeeeee;
+      border-bottom: 1px solid #eeeeee;
+      z-index: 1;
+      display: none;
+    }
+
+    .navbar.show{
+        display: inline-block;
+    }
+    .ham-burger .fa{
+        display: block;
+    }
+    header .navbar ul li{
+        display: block;
+        margin-left: 0;
+    }
+    header .navbar ul li a{
+        line-height: 42px;
+        color: #000000;
+    }
+    header .navbar ul li a::before{
+        background-color: #febd01;
+    }
+    .skills .skills-content{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    #image{
+        width: 100%;
+        margin: 0;
+    }
+}
+@media(max-width: 500px){
+    .home .home-content .block h1{
+        font-size: 30px;
+    }
+    .home .home-content .block h3{
+        font-size: 20px;
+    }
+    .home .home-content .block{
+        padding-left: 20px;
+    }
+    .table-content tbody tr td{
+        font-size: 15px;
+    }
+
+}

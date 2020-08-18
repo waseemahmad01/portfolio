@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ECMAScript.css">
+</head>
+<body>
+   <!-- Start header -->
+   <header>
+    <div class="container">
+        <div class="row">
+            <div class="brand-name">
+                <a href="">Healer</a>
+            </div>
+            <div class="ham-burger">
+                <i class="fa fa-bars"></i>
+            </div>
+            <div class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="skill.html">Skill</a></li>
+                    <li><a href="qualification.html">Qualification</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+    <!-- End Header -->
+
+    <!-- Start Home Section -->
+    <section class="home">
+        <div class="container">
+            <div class="row full-screen">
+                <div class="home-content">
+                    <div class="block">    
+                        <h6>Hello, My Name is</h6>
+                        <h1>Waseem Ahmad</h1>
+                        <h3>Web Developer</h3>
+                        <div class="cv-btn">
+                            <a href="">Download CV</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- End Home Section -->
+
+    <!-- Start Applet -->
+    <section class="applet">
+        <h1>Cofee Shop</h1>
+      <form id="form">
+          <table>
+              <tr>
+                  <td><label>Select a Drink : </label></td>
+                  <td><Select id="drinkSelector" onchange="getMilkValues()">
+                      <option value="">------</option>
+                      <option value="latte">Latte</option>
+                      <option value="cappuccino">Cappuccino</option>
+                      <option value="flat white">Flat White</option>
+                      <option value="espresso">Espresso</option>
+                      <option value="americano">Americano</option>
+                  </Select> <span id="drinkSelectWarning"></span></td>
+              </tr>
+              <tr>
+                  <td><label>Select size of Drink: </label></td>
+                  <td><Select id="sizeSelector" onchange="getPrice()">
+                        <option value="small">Small</option>
+                        <option value="medium" selected>Medium</option>
+                        <option value="Large">Large</option>
+                  </Select></td>
+              </tr>
+              <tr id="milkRow">
+                  
+              </tr>
+              <tr>
+                  <td><label>Any Extra requirement: </label></td>
+                  <td><select id="extra" onchange="getExtra()">
+                      <option value="">------</option>
+                      <option value="suger">Suger</option>
+                      <option value="creame">Creame</option>
+                  </select></td>
+              </tr>
+              <tr>
+                  <td><label for="">Shots of Syrup: </label></td>
+                  <td><select id="shots" onchange=" addSypShots()">
+                      <option value="0">0</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option> 
+                  </select></td>
+              </tr>
+              <tr>
+                <td>
+                    <label for="">Add  current order to Favourite: </label>
+                </td>
+                <td><button class="fav" onclick="addToFavourite()">Add To Favourite</button></td>
+              </tr>
+              <tr>
+                <td></td>
+                    <td>
+                        <button onclick="addToOrder()" type="reset">Add To Order</button>
+                </td>   
+              </tr>
+              
+          </table>
+      </form>
+      <br>
+      <h1>Price Info</h1>
+      <table>
+          <tr>
+              <td><label for="">Small Drinks:</label></td>
+              <td><span id="sd">$</span></td>
+          </tr>
+          <tr>
+            <td><label for="">Medium Drinks:</label></td>
+            <td><span id="md">$</span></td>
+        </tr>
+        <tr>
+            <td><label for="">Large Drinks:</label></td>
+            <td><span id="ld">$</span></td>
+        </tr>
+        <tr>
+            <td><label for="">Extra Creame:</label></td>
+            <td><span id="ec">$</span></td>
+        </tr>
+        <tr>
+            <td><label for="">Syrup per shot:</label></td>
+            <td><span id="syp">$</span></td>
+        </tr>
+      </table>
+
+      <br>
+      <h1>Order Info</h1>
+      <div class="stats">
+          <table>
+              <tr>
+                  <td><label>Current Drink : </label></td>
+                  <td><span id="currentDrink"></span></td>
+              </tr>
+              <tr>
+                  <td><label>Cost of current Drink : </label></td>
+                  <td><span id="cost">0</span></td>
+              </tr>
+              <tr>
+                  <td><label>Overall Order : </label></td>
+                  <td><span id="overall"></span></td>
+              </tr>
+              <tr>
+                  <td><label>Overall Cost of the Order : </label></td>
+                  <td><span id="overallCost">0</span></td>
+              </tr>
+              <tr>
+                  <td></td>
+                  <td><button onclick="placeOrder()">Place Order</button></td>
+              </tr>
+              <tr>
+                  <td></td>
+                  <td><button class="fav" onclick="orderFavourite()">Order Favourite</button></td></tr>
+          </table>      
+      </div>
+    </section>
+<!-- End Applet -->
+
+<!-- two column section -->
+<section class="four">
+    <div class="container">
+        <div class="box">
+            <i class="fab fa-css3"></i>
+            <h3>Css Example 1</h3>
+            <a href="example1.html">Example</a>
+        </div>
+        <div class="box">
+            <i class="fab fa-css3"></i>
+            <h3>Css Example 2</h3>
+            <a href="example2.html">Example</a>
+        </div>
+    </div>
+</section>
+<!-- end two column section -->
+<!-- Start Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="logo">
+                Healer
+            </div>
+            <div class="social">
+                <a href=""><i class="fab fa-facebook"></i></a>
+                <a href=""><i class="fab fa-twitter"></i></a>
+                <a href=""><i class="fab fa-instagram"></i></a>
+                <a href=""><i class="fab fa-linkedin"></i></a>
+                <a href=""><i class="fab fa-pinterest"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End Footer -->
+
+<section class="copyright">
+    <div class="container">
+        <p>&copy; 2020 copyright all right reserved</p>
+    </div>
+</section>
+
+
+ 
+    <script src="ECMAScript.js"></script>
+    <script src="javascript.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+</html>
